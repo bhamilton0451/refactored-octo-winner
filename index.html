@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Javascript</title>
+  <meta name="author" content="Bryan Montgomery Hamilton">
+  <meta name="keywords" content="200021401, web, javascript">
+  <meta name="description" content="Atividade sobre javascript">
+
+  <script>
+    function concatenar(a, b, c) {
+      result = (
+        (a.toString()) + (b.toString()) + (c.toString())
+      )
+
+      return "Concatenação: " + result
+    }
+
+    function editTexto(a, b, c) {
+      document.getElementById("paragraph_1").innerHTML = concatenar(a, b, c)
+    }
+  </script>
+</head>
+
+<body>
+
+  <label for="texto1">Login:</label>
+  <input type="text" id="a"><br>
+
+  <label for="texto2">Senha:</label>
+  <input type="password" id="b"><br>
+
+  <label for="c">Faixa Etária:</label>
+  <select name="Faixa Etária" id="c">
+    <option selected value=faixa_inv>--</option>
+    <option value=faixa1>3 a 10</option>
+    <option value=faixa2>11 a 25</option>
+    <option value=faixa3>26 a 55</option>
+    <option value=faixa4>55 a 100</option>
+  </select><br>
+
+  <br>
+
+  <button onclick="editTexto(
+    document.getElementById('a').value, 
+    document.getElementById('b').value,
+    document.getElementById('c').value
+  )">
+    Enviar
+  </button>
+
+  <br>
+  <p id="paragraph_1"></p>
+</body>
+
+</html>
